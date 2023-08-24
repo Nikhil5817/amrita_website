@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Academics - Amrita Vishwa Vidyapeetham</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="D:/7th sem/fsd/assignment_2/style.css">
+</head>
+<style>
+
+    /* Your existing styles */
+/* ... */
+
+/* Styles for the gallery section */
+.gallery {
+    margin: 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.arrows {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.arrows span {
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Additional styles for navigation arrows */
+.prev, .next {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    color: #000;
+}
+
+    /* Styles for the footer */
+    .footer {
+        background-color: #f0f0f0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+
+    .footer a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+        color: #000;
+    }
+
+/* ... */
+
+
+</style>
+<body>
+
+
+    <header class="header">
+        <!-- Navigation bar content -->
+        <img src="C:/Users/Nikhil Kumar/Downloads/Amrita-vishwa-vidyapeetham-color-logo.png" class="logo" width="150" height="65">
+        <a href="#" class="logo"> <span>Amrita </span>Vishwa VidyaPeetam </a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="academics.html">Academics</a>
+            <a href="#vehicles">Admissions</a>
+            <a href="#about">gallery</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="slider">
+            <div class="slide">
+                <img src="https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2022/05/amrita-admission-amritapuri-campus.jpg" alt="Amritapuri Campus">
+            </div>
+            <div class="slide">
+                <img src="https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2022/05/amrita-admission-bengaluru-campus.jpg" alt="Bengaluru Campus">
+            </div>
+            <div class="slide">
+                <img src="https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2022/05/amrita-admission-coimbatore-campus.jpg" alt="Coimbatore Campus">
+            </div>
+            <div class="slide">
+                <img src="https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2022/05/amrita-admission-kochi-campus.jpg" alt="Kochi Campus">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="arrows">
+            <span class="prev">&lt;</span>
+            <span class="next">&gt;</span>
+        </div>
+    </section>
+
+    <!-- Your other sections here -->
+
+    <!-- <footer class="footer">
+        <p>&copy; 2023 Amrita Vishwa Vidyapeetham. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer> -->
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(slideIndex) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[slideIndex].style.display = 'block';
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            showSlide(currentSlide);
+        }
+
+        const prevArrow = document.querySelector('.prev');
+        const nextArrow = document.querySelector('.next');
+
+        prevArrow.addEventListener('click', prevSlide);
+        nextArrow.addEventListener('click', nextSlide);
+
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>

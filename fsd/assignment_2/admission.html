@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="D:/7th sem/fsd/assignment_2/style.css">
+    <title>admissions</title>
+</head>
+<style>
+    /* Add this CSS to your existing stylesheet or include it in a <style> tag */
+
+/* Styling for the admissions section */
+.admissions {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.admissions h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.admissions p {
+    margin-bottom: 15px;
+    font-size: medium;
+    width:max-content ;
+    
+}
+
+.admissions label, .admissions select, .admissions button {
+    display: block;
+    margin: 10px 0;
+    font-size: medium;
+}
+
+.admissions select, .admissions button {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.admissions address {
+    margin-top: 15px;
+    font-style: medium;
+}
+
+/* Styling for the navigation bar */
+.header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Additional styles as needed */
+
+</style>
+<body>
+    <header class="header">
+        <!-- Navigation bar content -->
+        <img src="C:/Users/Nikhil Kumar/Downloads/Amrita-vishwa-vidyapeetham-color-logo.png" class="logo" width="150" height="65">
+        <a href="#" class="logo"> <span>Amrita </span>Vishwa VidyaPeetam </a>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="academics.html">Academics</a>
+            <a href="#admissions.html">Admissions</a>
+            <a href="gallery.html">gallery</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+
+
+    <section class="course">
+        <div class="admissions">
+            <h2>Admissions</h2>
+            <p>If you are interested in joining the Amrita Viswa Vidyapeetam, please follow the steps below:</p>
+    
+            <form id="admissions-form">
+                <label for="department">Select Department:</label>
+                <select id="department" name="department">
+                    <option value="arts">Arts</option>
+                    <option value="sciences">Sciences</option>
+                    <option value="commerce">Commerce</option>
+                    <!-- Add more department options as needed -->
+                </select>
+    
+                <label for="course">Select Course:</label>
+                <select id="course" name="course"></select>
+    
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+    
+                <label for="previous-degree">Previous Degree:</label>
+                <input type="text" id="previous-degree" name="previous-degree" required>
+    
+                <button type="submit">Submit Application</button>
+            </form>
+    
+            <p>If you have any questions or need assistance, please contact our admissions office:</p>
+    
+            <address>
+                Email: admissions@university.edu<br>
+                Phone: +123-456-7890
+            </address>
+        </div>
+    </section>
+    
+    <script>
+        const departmentSelect = document.getElementById('department');
+        const courseSelect = document.getElementById('course');
+        
+        const courseOptions = {
+            arts: ['English', 'History'],
+            sciences: ['Mathematics', 'Physics', 'Computer Science', 'Statistics', 'Biotechnology'],
+            commerce: ['Accountancy', 'Business Administration', 'International Business']
+            // Add more department options and corresponding courses here
+        };
+        
+        departmentSelect.addEventListener('change', () => {
+            const selectedDepartment = departmentSelect.value;
+            courseSelect.innerHTML = '';
+            courseOptions[selectedDepartment].forEach(course => {
+                const option = document.createElement('option');
+                option.value = course.toLowerCase().replace(/\s+/g, '-');
+                option.textContent = course;
+                courseSelect.appendChild(option);
+            });
+        });
+    </script>
+    
+
+    
+    
+     
+    
+
+    <footer class="footer">
+        <!-- Footer content -->
+    </footer>
+    
+    <script>
+        // Your JavaScript code here
+    </script>
+</body>
+</html>

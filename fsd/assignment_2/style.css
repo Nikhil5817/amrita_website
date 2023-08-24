@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --yellow: #FFC300;
+    --light-yellow:#ffee80;
+    --red:#c32f4c;
+    --black:#130f40;
+    --light-color:#666;
+    --white:#fff;
+    --light-white:#c2c1bf;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.1);
+    
+    
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0s linear;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1 rem;
+    border-radius: 0.5rem;
+    background: var(--black);
+    color:var(--white);
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--red);
+    
+}
+
+
+
+/* Academics Section */
+.academics {
+    padding: 6rem 0;
+    background-color: #ffffff; /* Change this to the desired background color */
+    color: #c12e2e; /* Change this to the desired text color */
+    text-align: center;
+}
+
+.academics h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #a54316;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    
+}
+.container h1 {
+    max-width: 1200px;
+    margin:  auto;
+    padding: 5rem;
+}
+
+.departments h2{
+    background-color: #ffffff;
+}
+.departments ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.departments li {
+    background-color: #fdfdfd; /* Change this to the background color of the department box */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.departments li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.department-heading {
+    font-size: 2rem;
+    color: #333; /* Change this to the desired heading color */
+    margin-bottom: 1rem;
+}
+
+.course-links {
+    margin-top: 1rem;
+}
+
+.departments a {
+    color: #b82a6d; /* Change this to the link color */
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 1.8rem; /* Adjust the font size as needed */
+}
+
+.departments a:hover {
+    color: #f88c8c; /* Change this to the link color on hover */
+}
+
+.departments h2{
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #130f40;
+}
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0; right:0;
+    padding:2rem 9%;
+    z-index: 1000;
+    background: #fff;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.header .logo span{
+    color: var(--red);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:1.5rem;
+    color: var(--black);
+    
+}
+.header .navbar.active a{
+    
+    color: var(--black);
+    
+}
+
+.header .navbar a:hover{
+    color:var(--red);
+}
+
+.header .btn{
+    margin-top: 0;
+}
+
+
+/* About Us Section */
+/* About Us Section */
+/* About Us Section */
+.about {
+    padding: 6rem 0;
+    background-color: #b30849; 
+}
+
+
+.about h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    margin-bottom: 4rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    padding: 0 10%;
+}
+
+.about-info {
+    background-color: var(--white); /* Change this to the desired background color */
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.about-info h2 {
+    font-size: 2.5rem;
+    color: var(--red); /* Change this to the desired heading color */
+    margin-bottom: 1rem;
+}
+
+.about-info p {
+    font-size: 1.6rem;
+    color: var(--black); /* Change this to the desired text color */
+    line-height: 1.8;
+}
+
+
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    background-color: #fff;
+    padding: 1rem 9%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.course {
+    margin-top: 10rem; /* Adjust this margin as needed */
+    padding-top: 5rem; /* Add padding to prevent content from going under the navigation bar */
+    padding-bottom: 5rem;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+.course-description {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-description h1 {
+    font-size: 2.5rem;
+    color: var(--red); /* Change to desired color */
+    margin-bottom: 1rem;
+}
+
+.course-description p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.teachers,
+.timetable {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.teachers h2,
+.timetable h2 {
+    font-size: 2rem;
+    color: var(--red); /* Change to desired color */
+    margin-bottom: 1rem;
+}
+
+.teachers ul {
+    list-style: none;
+}
+
+.teachers li {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.timetable table {
+    width: 100%;
+    font-size: 1.3rem;
+    border-collapse: collapse;
+}
+
+.timetable th,
+.timetable td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.timetable th {
+    font-weight: 600;
+}
+
+.footer {
+    padding: 2rem 9%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--red); /* Change to desired color */
+    text-decoration: none;
+}
+
+/* Add more styles as needed */
+
+
+
+.header.active{
+    box-shadow: var(--box-shadow);
+    padding: 2rem 9%;
+}
+
+
+
+.home{
+    padding-top: 10rem;
+    padding-left: 0rem;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.home h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.home img{
+    width: 100%;
+    margin: 1rem 0;
+    padding-top: 10px;
+}
+
+
+.home a{
+    margin-left: 5px;
+    text-align: center;
+}
+
+
+
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    float: left;
+    width: 20%;
+}
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+
+ .icons-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    background: #eee;
+ }
+
+ .icons-container .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+ }
+
+.icons-container .icons i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background: #eee;
+    color: var(--black);
+    text-align: center;
+}
+
+.icons-container .icons .content h3{
+    color: var(--red);
+    font-size: 2.5rem;
+}
+
+.icons-container .icons .content p{
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+.icons-container .icons:hover{
+    background: var(--black);
+}
+.icons-container .icons:hover i{
+    background: var(--yellow);
+}
+.icons-container .icons:hover .content h3{
+    color: #fff;
+}
+.icons-container .icons:hover .content p{
+    color: #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.contact .row .map{
+    flex:1 1 42rem;
+    width: 100%;
+    padding:2rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+}
+
+.contact .row form{
+    padding:2rem;
+    flex:1 1 42rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.contact .row form h3{
+    font-size: 3rem;
+    color:var(--black);
+    padding-bottom: 1rem;
+}
+
+.contact .row form .box{
+    width:100%;
+    border-radius: .5rem;
+    padding:1rem 1.2rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    border:var(--border);
+    margin:.7rem 0;
+}
+
+.contact .row form textarea{
+    height:15rem;
+    resize: none;
+}
+
+
+
+
+
+
+
+
+.wrapper{
+    position: relative;
+    max-width: 430px;
+    margin-left: 36%;
+    display: grid;
+    margin-top: 10%;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .wrapper h2{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+  .wrapper h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background:var(--red);
+  }
+  .wrapper form{
+    margin-top: 30px;
+  }
+  .wrapper form .input-box{
+    height: 52px;
+    margin: 18px 0;
+  }
+  form .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .input-box input:focus,
+  .input-box input:valid{
+    border-color: var(--red);
+  }
+  form .policy{
+    display: flex;
+    align-items: center;
+  }
+  form h3{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .input-box.button input{
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: var(--black);
+    cursor: pointer;
+  }
+  .input-box.button input:hover{
+    background: var(--red);
+  }
+  form .text h3{
+   color: #f4a8a8;
+   width: 100%;
+   text-align: center;
+  }
+  form .text h3 a{
+    color:var(--red);
+    text-decoration: none;
+  }
+  form .text h3 a:hover{
+    text-decoration: underline;
+  }
+  
+  .footer{
+
+    background: var(--black);
+
+   
+
+}
+
+
+
+.footer .box-container{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    gap: 1.5rem;
+
+}
+
+
+
+.footer .box-container .box h3{
+
+    color: var(--red);
+
+    font-size: 2.2rem;
+
+    padding: 1rem 0;
+
+}
+
+
+
+.footer .box-container .box a{
+
+    color: var(--red);
+
+    font-size: 1.4rem;
+
+    padding: 1rem 0;
+
+    display: block;
+
+}
+
+
+
+.footer.box-container .box a i{
+
+    padding-left: .5rem;
+
+    color: var(--red);
+
+
+
+}
+
+
+
+.footer .box-container .box a:hover i{
+
+    padding-left: 2rem;
+
+   
+
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding:2rem;
+    }
+    .header .active{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px){
+
+    #menu-btn{
+        display: block;
+    }
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+    .header #login-btn i{
+        display: block;
+    }
+    .header #login-btn .btn{
+        display: none;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background: black;
+        border-top: var(--border);
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .heading {
+        font-size: 3rem;
+    }
+}
